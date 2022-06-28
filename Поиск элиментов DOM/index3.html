@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>querySelectorAll</title>
+</head>
+<body>
+    <ul id = 'url'>
+        <li><a href="https://chita.ru/">Яблоко</a></li>
+        <li><a href="ftp://www.zabkit.edu/domoload/dom.zip">Груша</a></li>
+        <li><a href="https://chita.ru/">Вишня</a></li>
+        <li><a href="http://www.chita.com/domoload/report.doc">Слив</a></li>
+        <li><a href="http://www.chita.ru/">Манго</a></li>
+    </ul>
+    <script>
+        let protocol = ['https', 'http', 'ftp'], domen = ['ru', 'com', 'edu'], files = ['zip, doc']
+       for( let i of protocol)
+        {
+            alert(i+ ': '+ (document.querySelectorAll('#url a[href^='+i+']').length))
+        }
+        for( let i of domen)
+        {
+            alert(i+': '+(document.querySelectorAll('#url a[href*='+i+']').length))
+        }
+        for( let i of files)
+        {
+            alert(i+': '+(document.querySelectorAll('#url a[href*='+i+']').length))
+        }
+        let a = prompt('ПОИСК')
+        alert(alert(a+': '+(document.querySelectorAll('#url a[href*='+a+']').length)))
+    </script>
+</body>
+</html>

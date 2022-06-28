@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квадратное уравнение</title>
+    <style>
+        #sqrt{width: 250px;}
+
+    </style>
+</head>
+<body>
+    <input type="text" title="Уравнение" id="sqrt" value="ax^2+bx+c=0" onclick="clean1()">
+    <input id ='b' type="button" value="РЕШИТЬ БЕСПЛАТНО" onclick="resh()">
+    <script>
+            function clean1()
+            {    
+                sqrt.value = ''
+            };
+
+            function resh()
+            {function quadraticEquation (a, b, c)
+                {
+                    if(a == 0)
+                        return false;
+                    let res = {};
+                    let D = b * b - 4 * a * c;
+                    console.log('D = ' + D);
+                    if(D < 0)
+                        return false;
+                    res['discriminant'] = D;
+                    if(D == 0)
+                        res["quadratic roots"] = (-b + Math.sqrt(D)) / (2 * a);
+                    else if(D > 0){
+                        let tmp = [];
+                        tmp.push((-b + Math.sqrt(D)) / (2 * a));
+                        tmp.push((-b - Math.sqrt(D)) / (2 * a));
+                        res["quadratic roots"] = tmp;
+                    }
+                    return res["quadratic roots"];
+                }
+                t = String(sqrt.value).replace(/\s+/g, '')
+                if (t.indexOf('x^2')!==-1)
+                    {
+                        a = t.slice(t,t.indexOf('x^2'))
+                        t = t.slice(t.indexOf('x^2')+3, t.lenght)
+                    }
+                alert(t)
+                if (t.indexOf('x')!==-1)
+                {
+                    b = t.slice(t,t.indexOf('x'))
+                }
+                if (t.indexOf('x^2')!==-1)
+                    {
+                        a = +(t.slice(t,t.indexOf('x^2')))
+                    }
+                alert(a, b)
+                // alert(quadraticEquation(a, b, c));
+                    }
+            
+
+    </script>
+</body>
+</html>

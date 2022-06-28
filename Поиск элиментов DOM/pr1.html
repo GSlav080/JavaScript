@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Доступ к элиментам DOM</title>
+</head>
+<body>
+    <div>
+        <p>
+            <b>Работа</b>
+        </p>
+        <div>
+            <p>Задача</p>
+        </div>
+
+    </div>
+    <ul id = 'ul1'>
+        <li>Яблоко</li>
+        <li>Груша</li>
+        <li>Вишня</li>
+        <li>Слива</li>
+        <li>Манго</li>
+    </ul>
+    <ul id = 'ul2'>
+        <li>Стол</li>
+        <li>Стул</li>
+        <li>Кресло</li>
+
+    </ul>
+    <ul id = 'ul3'>
+        <li>Малина</li>
+        <li>Черешня</li>
+        <li>Клабника</li>
+        <li>Арбуз</li>
+    </ul>
+    <p>Результат</p>
+
+    <script>
+        
+       for (i of [1, 2, 3])
+        {
+            let ul = document.getElementById('ul'+i).children;
+            let li = ul[i-1];
+            li.style.textDecoration = 'underline'
+
+        }
+    </script>
+</body>
+</html>

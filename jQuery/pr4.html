@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pr4</title>
+    <script type="text/javascript"src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    
+    <style>
+        #place {
+            background: rgb(236, 217, 189);
+            border: 2px solid black;
+            width: 1000px;
+            height: 800px;
+            margin-top: 10px;
+        }
+        .button {
+            width: 140px;
+            height: 25px;
+            font-size: 18px;
+        }
+
+        #sqrt {background: red;
+            border: 1px solid black;
+            height: 50px;
+            width: 50px;
+ 
+            left: 15px;
+            top: 15px;
+            position:relative;
+            }
+        #speed {display: inline-block;
+                font-size: 20px;}
+                
+    </style>
+</head>
+<body><div>
+        <b id='speed'>Скорость:</b>
+        <input type="number" class='button' id='b'value='50'>
+        <input type='button' class="button" id='b1' value="&#8592">
+        <input type='button' class="button" id='b2' value="&#8593">
+        <input type='button' class="button" id='b3' value="&#8594">
+        <input type='button' class="button" id='b4' value="&#8595">
+        <input type='button' class="button" id='b5' value="СБРОС">
+    </div>
+    <div id='place'>
+        <div id='sqrt'></div>
+    </div>
+
+
+    <script>
+
+            $(document).ready(function(){
+
+                $('#b5').click( 
+                    function(){
+                           $('#sqrt').css({left:5, top: 5})
+                           b.value = 50
+                    })
+
+                $('#b1').click(function() {
+                    let m = Number(b.value)
+                    if (m == 0){m = 50}
+                    if ( Number($('#sqrt').css('left').slice(0, -2))-m > 0)
+                    {$('#sqrt').animate({left: Number($('#sqrt').css('left').slice(0, -2))-m}, 500)}
+
+                })  
+
+                $('#b2').click(function() {
+                    let m = Number(b.value)
+                    if (m == 0){m = 50}
+                    if ( 0 <= Number($('#sqrt').css('top').slice(0, -2))-m > 0)
+                    {$('#sqrt').animate({top: Number($('#sqrt').css('top').slice(0, -2))-m}, 500)}
+
+                })
+
+                $('#b3').click(function() {
+                    let m = Number(b.value)
+                    if (m == 0){m = 50}
+                    if (Number($('#sqrt').css('left').slice(0, -2))+m+50 < Number($('#place').css('width').slice(0, -2)))
+                    {$('#sqrt').animate({left: Number($('#sqrt').css('left').slice(0, -2))+m}, 500)}
+
+                })
+
+                $('#b4').click(function() {
+                    let m = Number(b.value)
+                    if (m == 0){m = 50}
+                    if (Number($('#sqrt').css('top').slice(0, -2))+m+50 < Number($('#place').css('height').slice(0, -2)))
+                    {$('#sqrt').animate({top: Number($('#sqrt').css('top').slice(0, -2))+m}, 500)}
+
+                })
+        })
+
+    </script>
+
+</body>
+</html>

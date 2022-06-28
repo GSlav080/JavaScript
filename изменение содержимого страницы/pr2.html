@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическая работа 2</title>
+</head>
+<body>
+    <script>
+        let tabl = document.createElement('table'),mt30 = [4, 6, 9, 11], mt31 = [12, 10, 8, 1, 3, 5, 7],day = +prompt('День недели'), month = +prompt('месяц'),start = 0
+        if (mt30.includes(month)) {start = 30}
+
+        else if (mt31.includes(month)) {start = 31}
+        else {start = 0}
+        if (start != 0)
+            {   
+                for (i = 1; i <= start;)
+                {
+                    let tr = document.body.createElement('tr')
+                    for (j = 0; j <7 ; j ++)
+                        {
+                            tr.append(createElement('td'))
+                            
+                        }
+                }
+            }
+        document.body.append(tabl)
+    </script>
+</body>
+</html>

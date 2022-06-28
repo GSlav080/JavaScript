@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pr1</title>
+    <style>
+        #t2 {
+            position: absolute;
+            top: 35px;
+            left: 8px;
+
+        }
+
+        #win1 {
+            border-radius: 1%;
+            width: 500px;
+            height: 400px;
+            background-color: rgb(170, 170, 26);
+            font-size: 50px;
+            position: absolute;
+            left: 50%;
+            text-align: center;
+            margin-left: -250px;
+            top: 50%;
+            margin-top: -200px;
+            display: none;
+        }
+        .big {font-size: 120px;}
+    </style>
+</head>
+<body>
+    <div id='win1'></div>
+    <input id = 't1' type="text" value="Первое число" onclick="clean1()">
+    <input id = 't2' type="text" value="Второе число" onclick="clean2()">
+    <input id = 'b'type="button" value="Сумма" onclick="summa();clean()">
+
+    <script>
+        function clean_win()
+            {
+                win1.style.display = none
+            }
+        function clean()
+              {
+                clean_win()
+        t1.value = 'Первое число'
+        t2.value = 'Второе число'
+                }
+        function clean1()
+            {    
+                t1.value = ''
+            }
+        function clean2()
+            {
+                
+            t2.value = ''
+            
+            }
+
+        function summa()
+        {   
+            if (t1.value !== '' && t2.value !== '')
+                {
+                a = +(t1.value)
+                b = +(t2.value)
+                if ((isNaN(a) || isNaN(b))==false)
+                    {c = a + b
+                    win1.style.display = 'block'
+                    win1.innerHTML = 'СУММА ЭТИХ ДВУХ ЧИСЛЕ РАВНА\n'+`<p class='big'><b>${c}</b></p>`
+                        }
+                else{alert('Введите числа')}
+                }
+            else{alert('Введите числа')}
+ 
+
+        }   
+
+
+
+    </script>
+</body>
+</html>

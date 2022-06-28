@@ -1,0 +1,101 @@
+#centerLayer {
+    position: absolute; /* Абсолютное позиционирование */
+    width: 280px; /* Ширина слоя в пикселах */
+    height: 180px; /* Высота слоя в пикселах */
+    left: 50%; /* Положение слоя от левого края */
+    top: 50%; /* Положение слоя от верхнего края */
+    margin-left: -150px; /* Отступ слева */
+    margin-top: -100px;	/* Отступ сверху */
+    background: #fc0; /* Цвет фона */
+    border: solid 1px black; /* Параметры рамки вокруг */
+    padding: 10px; /* Поля вокруг текста */
+    overflow: auto; /* Добавление полосы прокрутки */ 
+   }
+#create2   body {
+    font: 10pt Arial, Helvetica, sans-serif; /* Шрифт на веб-странице */
+    background: #e1dfb9; /* Цвет фона */
+   }
+
+#create2    #container {
+    width: 500px; /* Ширина слоя */
+    margin: 0 auto; /* Выравнивание по центру */
+    background: #f0f0f0; /* Цвет фона левой колонки */
+   }
+#create2    #header {
+    font-size: 2.2em; /* Размер текста */
+    text-align: center; /* Выравнивание по центру */
+    padding: 5px; /* Отступы вокруг текста */
+    background: #8fa09b; /* Цвет фона шапки */
+    color: #ffe; /* Цвет текста */
+    height: 50px;
+    border: black 1px solid;
+   }
+#create2    #sidebar {
+    margin-top: 10px; 
+    width: 110px; /* Ширина слоя */
+    padding: 0 10px; /* Отступы вокруг текста */
+    float: left; /* Обтекание по правому краю */
+   }
+#create2   #content {
+    height: 700px;
+    margin-left: 130px; /* Отступ слева */
+    padding: 10px; /* Поля вокруг текста */
+    background: #fff; /* Цвет фона правой колонки */
+    border: black 1px solid;
+   }
+#create2  #footer {
+    background: #8fa09b; /* Цвет фона подвала */
+    color: #fff; /* Цвет текста */
+    padding: 5px; /* Отступы вокруг текста */
+    clear: left; /* Отменяем действие float */
+    height: 50px;
+    border: black 1px solid;
+   }
+
+
+#create3   body {
+    font: 10pt Arial, Helvetica, sans-serif; /* Шрифт на веб-странице */
+    background: #54463d; /* Цвет фона */
+    margin: 0; /* Убираем отступы */
+   }
+   #create3    h2 {
+    font-size: 1.1em; /* Размер шрифта */
+    color: #752641; /* Цвет текста */
+    margin-bottom: 0; /* Отступ снизу */
+   }
+   #create3   #container {
+    width: 500px; /* Ширина макета */
+    margin: 0 auto; /* Выравниваем по центру */
+    background: #f0f0f0; /* Цвет фона правой колонки */ 
+   }
+   #create3   #header {
+    background: #8fa09b; /* Цвет фона */
+    font-size: 24pt; /* Размер текста */
+    font-weight: bold; /* Жирное начертание */
+    color: #edeed5; /* Цвет текста */
+    padding: 5px; /* Отступы вокруг текста */
+   }
+   #create3  #content {
+    height: 700px;
+    float: left; /* Обтекание по правому краю */
+    width: 329px; /* Ширина левой колонки */
+    padding: 10px; /* Поля вокруг текста */
+    border-right: 1px dashed #183533; /* Линия справа */
+    background: #fff; /* Цвет фона левой колонки */
+   }
+   #create3  #content p {
+    margin-top: 0.3em /* Отступ сверху */
+   }
+   #create3   #sidebar {
+    float: left; /* Обтекание по правому краю */
+    width: 120px; /* Ширина */
+    padding: 10px; /* Отступы вокруг текста */
+   }
+   #create3  #footer {
+    background: #8fa09b; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 5px; /* Отступы вокруг текста */
+   }
+   #create3  .clear { 
+    clear: both; /* Отмена обтекания */ 
+   }

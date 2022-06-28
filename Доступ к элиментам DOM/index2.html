@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Доступ к элиментам DOM</title>
+</head>
+<body>
+    <div>
+        <p>
+            <b>Работа</b>
+        </p>
+        <div>
+            <p>Задача</p>
+        </div>
+
+    </div>
+    <ul>
+        <li>Яблока</li>
+        <li>Груша</li>
+        <li>Банан</li>
+    </ul>
+    <p>Результат</p>
+    <script>
+        // Коллекция body
+        let K = document.body.childNodes
+        /*
+        for (let i = 0; i < K.length; i++)
+            alert(K[i])
+        */
+
+        /*
+        for (let i = 0; i < K.length; i++)
+            {   
+                
+                if (K[i] == '[object HTMLUListElement]')
+                {
+                    let ul = K[i].childNodes
+                    let count = 0
+                    for (let j = 0; j < ul.length; j++)
+                    {
+                        if(ul[j] == '[object HTMLLIElement]')
+                        {   
+                            
+                            if (count % 2 == 0) {ul[j].style.background = 'green'}
+                            count ++
+
+                            
+                        }
+                    }
+                }
+            }
+        */
+       for (i of K)
+       {
+           alert(i)
+       }
+
+    </script>
+</body>
+</html>

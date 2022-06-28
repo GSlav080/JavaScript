@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <style>
+        #menu {
+                width: 100px;
+                text-align: left;
+                padding: 0%;
+                margin: 0;
+	            padding: 0;
+            }
+        #menu ul {
+                margin: 0;
+	            padding: 0;
+
+                }
+
+        #menu ul p {display:block ;
+                    background: rgb(77, 223, 41);
+	                margin: 0;
+                    border: rgb(13, 2, 75) solid 2px;
+	                padding: 0;
+
+                }
+
+        #menu ul li {
+                    display: block ;
+                    align-content: center;
+                    list-style-type: none;
+                    text-align: left;
+                    width: 10;
+                    background: rgb(22, 201, 177);
+                    border: rgb(13, 2, 75) solid 2px;
+                    list-style-type: none ;
+                    margin: 10;
+	                padding: 10;
+                    margin-left: 30px;
+
+                    }
+    </style>
+    <title>Изменение содержимого сайта</title>
+</head>
+<body>
+    <div id="menu">
+
+    </div>
+
+    <script>
+        let menu = document.getElementById('menu');
+        let data = [['Пункт1', ['1', '2', '3', '4',]], 
+        ['Пункт2', ['1', '2', '3', '4', '5']], 
+        ['Пункт3', ['1', '2', '3']]];
+        for (let i = 0; i < data.length; i++)
+            {
+                let name = document.createTextNode(data[i][0]), 
+                list = data[i][1];
+                let sub = document.createElement('ul');
+                sub.innerHTML += '<p>'+name.textContent+'</p>'
+                menu.append(sub)
+                for(let submenu of list)
+                    {   li = '<li>'+submenu+'</li>'
+                        menu.children[i].insertAdjacentHTML('beforeend', li)
+                    }
+
+
+            }
+
+
+    </script>
+    <script>
+        let min = 1000000000000
+        for (child of menu.children)
+            {
+               if (child.children.length < min){min = child.children.length}
+            }
+        for (child of menu.children)
+            {   let baby = child.children
+               for (rem = baby.length-1; baby.length > min; rem -= 1)
+                {
+                    baby[rem].remove()
+                    
+                }
+
+
+            }
+
+    </script>

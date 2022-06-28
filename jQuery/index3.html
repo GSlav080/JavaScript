@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index3</title>
+    <script type="text/javascript" 
+        src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <style>
+        #PAPA{  width: 300px;
+                height: 50px;
+                background: darkorchid; 
+                border:1px black solid ;
+                margin-bottom: 5px;
+                display: block;
+                font-size: 20px;
+            }
+        #MAMA {width: 500px;
+                height: 400px;
+                background: yellow;
+                border: 1px solid black;
+            margin-top: 50px;}
+        
+    </style>
+
+
+</head>
+<body>
+    
+
+
+
+    <input type="button" value="КНОПКА 1" id ='PAPA'>
+    <div id = 'MAMA'></div>
+    <script>
+        function b1() {
+            $('#MAMA').fadeOut(3000)
+            }
+        
+        function b2() {
+            $('#MAMA').fadeIn(3000)
+            }
+        function b3() {
+                $('#MAMA').fadeTo(1000, 0.1)
+                }
+        
+        function b4() {
+            $('#MAMA').slideUp(3000)
+            }
+        function b5() {
+                $('#MAMA').slideDown(3000)
+                }
+        
+        function b6() {
+            $('#MAMA').slideToggle(3000)
+            }
+        let a = 0
+
+
+        $('#PAPA').click(function rab(){
+            a++
+            if (a==1) {b1}
+            else if (a==2) {b2}
+            else if (a==3) {b3}
+            else if (a==4) {b4}
+            else if (a==5) {b5}
+            else if (a==6) {b6}
+            else a = 0
+            
+            
+            
+        })
+    </script>
+
+
+
+</body>
+</html>

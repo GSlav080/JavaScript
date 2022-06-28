@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <style>
+        div{background: orange;}
+        .name {border: black solid 1px;
+                background: chocolate;}
+
+        .name2 {border: black solid 1px;
+        background: rgb(172, 164, 58);}
+        .name3 {border: black solid 1px;
+        background: rgb(119, 194, 34);}
+        li {
+            list-style-type: none; 
+            }        
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пр1</title>
+</head>
+<body>
+    <script>
+        let list = ['Мебель',['Столы',['Кухонный', "Письменный"], "Шкафы",['1 уровень', '2 уровень']], 'Мебель',['Столы',['Кухонный', "Письменный"], "Шкафы",['1 уровень', '2 уровень']]], HTML = document.body
+        html = '<ul>'
+        for (let name = 0; name < list.length; name += 2)
+            {   html = html + '<li class="name">' + list[name]
+                let tp = list[name+1]
+                for (let name_tp = 0; name_tp < tp.length; name_tp += 2)
+                {   html = html + '<ul class="name2">' + tp[name_tp]
+                    sod = tp[name_tp+1] 
+                    for (let name_sod = 0; name_sod < sod.length; name_sod++)
+                    {   html =  html + '<li class="name3">' + sod[name_sod] + '</li>'
+                        
+                    }
+                    html += '</ul>'
+                }
+                html = html + '</li>'
+            }
+        html += '</ul>'
+        HTML.innerHTML += html
+        
+    </script>
+</body>
+</html>

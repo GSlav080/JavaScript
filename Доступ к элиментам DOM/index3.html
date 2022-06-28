@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Доступ к элиментам DOM</title>
+</head>
+<body>
+    <div>
+        <p>
+            <b>Работа</b>
+        </p>
+        <div>
+            <p>Задача</p>
+        </div>
+
+    </div>
+    <ul>
+        <li>Яблоко</li>
+        <li>Груша</li>
+        <li>Вишня</li>
+        <li>Слива</li>
+        <li>Манго</li>
+    </ul>
+    <ul>
+        <li>Стол</li>
+        <li>Стул</li>
+        <li>Кресло</li>
+
+    </ul>
+    <ul>
+        <li>Малина</li>
+        <li>Черешня</li>
+        <li>Клабника</li>
+        <li>Арбуз</li>
+    </ul>
+    <p>Результат</p>
+
+    <script>
+        let body = document.body.children, num = 0; 
+            for (i of body)
+            {
+                if (i == '[object HTMLUListElement]')
+                {   num ++;
+                    if (num == 2)
+                    {   
+                        for (let li of i.children)
+                        {
+                            alert(li.textContent)
+                        }
+                        alert(i.children.length);
+                    }
+                }
+                
+            }
+    </script>
+</body>
+</html>

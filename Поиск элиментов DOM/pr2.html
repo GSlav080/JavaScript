@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Доступ к элиментам DOM</title>
+</head>
+<body>
+    <div>
+        <p>
+            <b>Работа</b>
+        </p>
+        <div>
+            <p>Задача</p>
+        </div>
+
+    </div>
+    <ul class = 'ul'>
+        <li>Яблоко</li>
+        <li>Груша</li>
+        <li>Вишня</li>
+        <li>Слива</li>
+        <li>Манго</li>
+    </ul>
+    <ul class = 'ul'>
+        <li>Стол</li>
+        <li>Стул</li>
+        <li>Кресло</li>
+
+    </ul>
+    <ul class = 'ul'>
+        <li>Малина</li>
+        <li>Черешня</li>
+        <li>Клабника</li>
+        <li>Арбуз</li>
+    </ul>
+    <p>Результат</p>
+
+    <script>
+        let ul = document.getElementsByClassName('ul')
+        let count = 0
+        for (let i of ul)
+        {  
+            let li = i.children[count] 
+            li.style.textDecoration = 'underline'
+            count ++
+        }
+    </script>
+</body>
+</html>

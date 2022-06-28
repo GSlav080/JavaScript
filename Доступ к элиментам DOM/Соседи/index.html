@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Доступ к элиментам DOM</title>
+</head>
+<body>
+    <ul>
+        <li>Яблоко</li>
+        <li>Груша</li>
+        <li>Вишня</li>
+        <li>Слива</li>
+        <li>Манго</li>
+    </ul>
+    <ul>
+        <li>Стол</li>
+        <li>Стул</li>
+        <li>Кресло</li>
+
+    </ul>
+    <ul>
+        <li>Малина</li>
+        <li>Черешня</li>
+        <li>Клабника</li>
+        <li>Арбуз</li>
+    </ul>
+    <script>
+        let body = document.body.firstChild
+
+        for(let i = 0; i < document.body.childNodes.length-1; i++)
+        {
+            
+            body = body.nextSibling
+            if (body == '[object HTMLUListElement]')
+                {
+                    let ul = body.firstChild
+                    for(let j = 0; j < body.childNodes.length; j++)
+                    {   
+                       if (ul.previousSibling==null && ul.nextSibling == '[object HTMLLIElement]')
+                       {
+                           let li = ul.nextSibling;
+                           li.style.color = 'red'
+                           li.style.background = 'yellow'
+                       }
+                       else if (ul.nextSibling==null && ul.previousSibling == '[object HTMLLIElement]' && ul == '[object Text]')
+                       {
+                           let li = ul.previousSibling;
+                           li.style.color = 'green'
+                           li.style.background = 'yellow'
+                       }
+                       else if (ul.nextSibling==null && ul == '[object HTMLLIElement]')
+                       {
+                           let li = ul;
+                           li.style.color = 'green'
+                           li.style.background = 'yellow'
+                       }
+                    ul = ul.nextSibling
+
+                        
+                        
+                    }
+
+                }
+        }
+    </script>
+</body>
+</html>

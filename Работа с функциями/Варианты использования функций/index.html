@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Варианты использования функций</title>
+</head>
+<body>
+	<script>
+		function main(a, b)
+			{return a + b}
+		let a = +prompt('A: '), b = +prompt('B: ');
+		alert(main(a, b))
+		alert (2*5 + sum(a, b))
+	</script>
+	
+	<script>
+		alert(function (){return +prompt('A: ')+ +prompt('B: ')}())
+		alert(function main(){alert(+prompt('A: ')+ +prompt('B: '))}(), function main(){alert(+prompt('A: ')+ +prompt('B: '))}())
+
+	</script> 
+</body>
+</html>

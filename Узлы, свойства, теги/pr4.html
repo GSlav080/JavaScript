@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Pr3</title>
+    <style>
+        li{border: 1px solid;
+        background: yellow;
+        height: 50px;
+        width: 200px;
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Марс</li>
+        <li>Марс</li>
+        <li>Марс</li>
+        <li>Марс</li>
+
+
+    </ul>
+    <script>
+        let k = document.body.children[0].children;
+        let count = k.length, z = 0;
+        
+        for (let i = 0; i <= count; i++)
+            {
+            k[z].outerHTML += '<div><img src="img/mars.jpg"></div>'
+            z += 2
+            }
+        
+            
+
+    </script>
+</body>
+</html>

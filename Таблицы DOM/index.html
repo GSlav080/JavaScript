@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <style>
+        #table td, th { border: 2px skyblue solid;
+                width: 100px;
+                height: 100px;
+                text-align: center;
+            };
+
+       #table caption { background: khaki;
+              }
+
+    </style>
+</head>
+<body>
+    <table id = 'table'>
+        <caption>Таблица</caption>
+        <thead> 
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>22</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td>32</td>
+                <td>32</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td>_1_</td>
+            <td>_2_</td>
+            <td>_3_</td>
+        </tfoot>
+    </table>
+    <script>
+        let table = document.getElementById('table')
+    </script>
+    
+</body>
+</html>

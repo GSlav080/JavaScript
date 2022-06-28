@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <style>
+        #table td, th { border: 2px skyblue solid;
+                width: 100px;
+                height: 100px;
+                text-align: center;
+            };
+    </style>
+</head>
+<body>
+    <table id = 'table'>
+        <caption>Таблица</caption>
+        <thead>
+        <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>22</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td>32</td>
+                <td>32</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>22</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td>32</td>
+                <td>32</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>22</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td>32</td>
+                <td>32</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td>_1_</td>
+            <td>_2_</td>
+            <td>_3_</td>
+        </tfoot>
+    </table>
+    <script>
+        let table = document.getElementById('table')
+        table.tHead.style.background = 'orange';
+        let count = 0 ;
+        for (let i of table.tBodies)
+        {   if (count % 2 == 0) 
+                {
+                    i.style.background = 'yellow'
+                }
+
+            else
+                {i.style.background = 'lightblue'}
+            count ++ 
+        }
+        table.tFoot.style.background = 'lightgreen ';
+    </script>
+
+</body>
+</html>

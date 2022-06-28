@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Практика</title>
+</head>
+<body>
+    <div>
+    </div>
+    <script>
+        let count = 0, z= [['КОНТЕНТ1_1', 'КОНТЕНТ2_1'], ['КОНТЕНТ1_2', 'КОНТЕНТ2_2'], ['КОНТЕНТ1_3', 'КОНТЕНТ2_3']], div = document.body.childNodes[1];
+        for (i of z)
+        {   div += '<ul>'
+            ul = document.body.childNodes[1].childNodes
+            alert(ul[1])
+            for( j of i)
+            {
+                ul[1].innerHTML += '<li>'+z[i]+'</li>'
+            }
+            div += '</ul>'
+            count++
+        }
+    </script>
+</body>
+</html>

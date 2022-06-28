@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <style>
+        #block{background: orange;
+        width: 150px;
+        height: 170px;
+        border: 2px solid black;}
+        p {background: red;
+            width: 150px;
+            height: 50px;
+            }
+    </style>
+    <title>Изменение содержимого сайта</title>
+</head>
+<body>
+    <div id="block">
+        <b>BLOCK</b></div>
+    <!-- <script>
+        let div = document.createElement('div');
+        alert(div);
+        let t = document.createTextNode('Утро так себе')
+        alert(t.textContent)
+    </script> -->
+    <script>
+        let a = block;
+        a.insertAdjacentHTML('beforebegin', '<p>111</p>')
+        a.insertAdjacentHTML('afterend', '<p>222</p>')
+        a.insertAdjacentHTML('afterbegin', '<p>333</p>')
+        a.insertAdjacentHTML('beforeend', '<p>333</p>')
+
+
+    </script>
+</body>
+</html>

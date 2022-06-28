@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Доступ к элиментам DOM</title>
+</head>
+<body>
+    <div>
+        <p>
+            <b>Работа</b>
+        </p>
+        <div>
+            <p> 
+                <b>Задача</b>
+            </p>
+        </div>
+
+    </div>
+    <div>
+        <ul>
+            <li>Яблоко</li>
+            <li>Груша</li>
+            <li>Вишня</li>
+            <li>Слива</li>
+            <li>Манго</li>
+        </ul>
+        <ul>
+            <li>Стол</li>
+            <li>Стул</li>
+            <li>Кресло</li>
+
+        </ul>
+    </div>
+    <ul>
+        <li>Малина</li>
+        <li>Черешня</li>
+        <li>Клабника</li>
+        <li>Арбуз</li>
+    </ul>
+    <p>Результат</p>
+    
+    <script>
+        document
+       for( let i of document.querySelectorAll('div ul'))
+        {
+            i.style.listStyleType = 'none'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Доступ к элиментам DOM</title>
+</head>
+<body>
+    <div>
+        <p>11<b>111</b>11</p>
+        <p>2222222</p>
+        <div>3333333</div></div>
+    <ul><li>444</li>
+        <li>555</li>
+        <li>666</li>
+    </ul>
+    <script>
+        let bod = document.body.childNodes
+        // Задание № 1
+        bod[1].childNodes[1].childNodes[1].style.background = 'red'
+        // Задание № 2
+        bod[1].lastChild.style.background = 'green'
+        // Задание № 3
+        bod[3].firstChild.style.background='blue'
+
+
+    </script>
+</body>
+</html>

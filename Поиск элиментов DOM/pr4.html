@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Доступ к элиментам DOM</title>
+    <style>
+        .menu li { background: yellow;
+                border: black 1px solid;
+                padding-top: 2px;
+                width: 100px;
+                height: 20px;
+
+
+            }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li>Яблоко</li>
+        <li>Груша</li>
+        <li>Вишня</li>
+        <li>Слива</li>
+        <li>Манго</li>
+    </ul>
+    <ul class="menu">
+        <li>Стол</li>
+        <li>Стул</li>
+        <li>Кресло</li>
+        <li>Малина</li>
+    </ul>
+    <ul class="menu">
+        <li>Черешня</li>
+        <li>Клабника</li>
+        <li>Арбуз</li>
+    </ul>
+    <script>
+        count = 0
+       for( let i of document.querySelectorAll('.menu li'))
+        {   if (count % 2 == 0)
+                {i.style.background = green}
+            else
+                {
+                    i.style.border = 'red'
+                }
+            count ++
+        }
+    </script>
+</body>
+</html>
